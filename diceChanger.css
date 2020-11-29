@@ -1,0 +1,28 @@
+*{
+    padding: 5px;
+    margin: 20px;
+}
+body{
+    border: 2px solid black;
+    width: 40%
+}
+#dices{
+    border: 1px solid black;
+}
+#num{
+    border: 3px solid blue;
+    width:5%;
+    text-align: center
+}
+button{
+    background-color: aqua;
+    border-color: aqua;
+}
+h2{
+    float: right;
+    border-bottom: 3px solid black;
+}
+p{
+   float:right;
+    width: 20%
+}
