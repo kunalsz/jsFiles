@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>spliceInWebPage</title>
+    </head>
+    <body>
+        <input id="name" placeholder="Name">
+        <button id="btn">Submit</button>
+        <div id="idk">
+        </div>
+        <script>
+            var ID = 0
+            var nameStr = []
+            document.getElementById('btn').addEventListener('click',function(event){
+                var name = document.getElementById('name').value 
+                //UNIQUE id FOR EACH ELEMENT
+                var htmldata = '<div id="%id%"><h2>%name%</h2>'
+                htmldata = htmldata.replace('%name%',name)
+                htmldata = htmldata.replace('%id%',ID)
+                 document.getElementById('idk').insertAdjacentHTML('afterbegin',htmldata)
+                nameStr.push(name) 
+                console.log(nameStr)
+                ID = ID + 1
+            })
+            //REMOVER
+            document.getElementById('idk').addEventListener('click',function(event){
+                //console.log(event.target.parentNode.parentNode)
+                var Eventer = event.target.parentNode
+                nameStr.splice(Eventer.id,1)//REMOVES THE ELEMENT CLICKED ON FORM THE LIST
+                console.log(Eventer.id)
+                //REMOVE THE ELEMENT FOR THE UI
+                Eventer.parentNode.removeChild(Eventer)
+                
+            })
+        </script>
+    </body>
+</html>

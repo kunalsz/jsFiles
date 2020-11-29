@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Splice</title>
+    </head>
+    <body>
+        <script>
+            
+            var obj = [2,4,67,342]
+            // console.log(obj.indexOf(342)) IT GIVES THE INDEX/ID OF THE NUMBER
+            /*
+            
+            obj.map(function(cur,id){ MAP FUNCTION IS SIMILAR TO foreach
+                console.log(id)
+            })
+            */
+            /*
+            var obj2 = obj.map(function(curEl,ID){
+                return ID
+            })
+            obj2.splice(2,1) //THIS IS TH SPLICE METHOD - IT REMOVES AN ELEMENT FOR THE LIST BY GIVING THE pos & amount.
+            */
+            
+            var Index = Number(prompt("ENTER!!"))
+            function moreTest(ID){
+                var what = obj.indexOf(Index)
+                obj.splice(what,1)
+            }
+            moreTest(Index) // REMOVES THE ELEMENT provided USER FOR THE LIST.
+            
+        </script>
+    </body>
+</html>
+
+
+
+
+
+

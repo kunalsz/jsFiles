@@ -1,0 +1,11 @@
+body{
+    background-color: black
+}
+.main{
+    border: 2px solid red;
+    padding: 5px;
+    background-color: aqua;
+}
+h1{
+    color: brown;
+}
